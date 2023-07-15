@@ -80,6 +80,45 @@ namespace butikunmuhasebe.API.Modules
                 }
             }
             }
+
+        public static string delete(string id)
+        {
+            using (var fs = File.OpenRead(JSONPath))
+            using (var sr = new StreamReader(fs, new UTF8Encoding(false)))
+            {
+                string json = sr.ReadToEnd();
+                Config = JsonConvert.DeserializeObject<jsconfig>(json);
+                connectionString = Config.connectionString;
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "DELETE FROM fatura WHERE fatura_no=" + id;
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        Log.dosyayaKaydet("Ürün Kaydı Silindi!\nID: " + id, "UserActivity");
+                        command.ExecuteNonQuery();
+                    }
+                    return "basarili";
+                }
+                catch (SqlException sql)
+                {
+                    Log.error(sql.Message, "SqlError");
+                    return sql.Message;
+                }
+                catch (Exception ex)
+                {
+                    Log.error(ex.Message, "SysError");
+                    return ex.Message;
+
+
+                }
+            }
+        }
     }
 #endregion;
 

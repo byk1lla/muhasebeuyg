@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace butikunmuhasebe.DataSet {
+namespace butikunmuhasebe {
     
     
     /// <summary>
@@ -835,7 +835,7 @@ namespace butikunmuhasebe.DataSet {
         }
     }
 }
-namespace butikunmuhasebe.DataSet.faturaDataSetTableAdapters {
+namespace butikunmuhasebe.faturaDataSetTableAdapters {
     
     
     /// <summary>
