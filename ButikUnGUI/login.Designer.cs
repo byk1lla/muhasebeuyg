@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.loginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.usname = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(121, 65);
+            this.label1.Location = new System.Drawing.Point(114, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 34);
             this.label1.TabIndex = 2;
@@ -63,6 +64,8 @@
             // 
             // usname
             // 
+            this.usname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.usname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.usname.Location = new System.Drawing.Point(52, 131);
             this.usname.Multiline = true;
             this.usname.Name = "usname";
@@ -86,9 +89,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(49, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 16);
+            this.label2.Size = new System.Drawing.Size(77, 16);
             this.label2.TabIndex = 6;
-            this.label2.Text = "E-Posta";
+            this.label2.Text = "Kullanıcı Adı";
             // 
             // label3
             // 
@@ -114,7 +117,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginBtn);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(372, 364);

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace butikunmuhasebe
+namespace butikunmuhasebe.API
 {
-    public partial class musteriler : Form
+    public partial class OpenOrder : Form
     {
-        public musteriler()
+        public OpenOrder()
         {
             InitializeComponent();
         }

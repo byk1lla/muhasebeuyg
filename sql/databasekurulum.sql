@@ -12,26 +12,10 @@
 */
 CREATE TABLE [dbo].[fatura] (
     [id]         INT             IDENTITY (1, 1) NOT NULL,
-    [musteri_id] INT             NULL,
+    [firma_adi]  varchar(255)             NULL,
     [fatura_no]  VARCHAR (20)    NULL,
     [tarih]      DATETIME        NULL,
     [tutar]      DECIMAL (18, 2) NULL,
-    PRIMARY KEY CLUSTERED ([id] ASC)
-);
-
-CREATE TABLE [dbo].[gelir] (
-    [id]       INT             IDENTITY (1, 1) NOT NULL,
-    [tarih]    DATETIME        NULL,
-    [aciklama] VARCHAR (255)   NULL,
-    [tutar]    DECIMAL (18, 2) NULL,
-    PRIMARY KEY CLUSTERED ([id] ASC)
-);
-
-CREATE TABLE [dbo].[gider] (
-    [id]       INT             IDENTITY (1, 1) NOT NULL,
-    [tarih]    DATETIME        NULL,
-    [aciklama] VARCHAR (255)   NULL,
-    [tutar]    DECIMAL (18, 2) NULL,
     PRIMARY KEY CLUSTERED ([id] ASC)
 );
 
@@ -45,18 +29,11 @@ CREATE TABLE [dbo].[musteri] (
 
 CREATE TABLE [dbo].[odeme] (
     [id]         INT             IDENTITY (1, 1) NOT NULL,
-    [musteri_id] INT             NULL,
+    [firma_adi]  varchar(255)    NULL,
     [odeme_no]   VARCHAR (20)    NULL,
     [odeme_turu] VARCHAR (50)    NULL,
     [tarih]      DATETIME        NULL,
     [tutar]      DECIMAL (18, 2) NULL,
-    PRIMARY KEY CLUSTERED ([id] ASC)
-);
-
-CREATE TABLE [dbo].[silinenmusteri] (
-    [id]          INT      IDENTITY (1, 1) NOT NULL,
-    [musteri_id]  INT      NULL,
-    [date_delete] DATETIME NULL,
     PRIMARY KEY CLUSTERED ([id] ASC)
 );
 

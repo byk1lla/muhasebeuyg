@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,17 +55,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\adduser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adduser.Designer.cs">
+      <DependentUpon>adduser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\addcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="API\addcustomer.Designer.cs">
+      <DependentUpon>addcustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\addorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="API\addorder.Designer.cs">
+      <DependentUpon>addorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\addproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="API\addproduct.Designer.cs">
+      <DependentUpon>addproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\ConfigJSON.cs" />
+    <Compile Include="API\OpenOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="API\OpenOrder.Designer.cs">
+      <DependentUpon>OpenOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="API\require.cs" />
     <Compile Include="butikunDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>butikunDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ButikUnGUI\login.cs">
+    <Compile Include="butikunDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>butikunDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="butikunDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>butikunDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ButikUnGUI\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ButikUnGUI\login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="ButikUnGUI\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButikUnGUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButikUnGUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="ButikUnGUI\Main.cs">
       <SubType>Form</SubType>
@@ -64,31 +120,82 @@
     <Compile Include="ButikUnGUI\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ButikUnGUI\musteriler.cs">
+    <Compile Include="ButikUser\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ButikUnGUI\musteriler.Designer.cs">
+    <Compile Include="ButikUser\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButikUser\musteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButikUser\musteriler.Designer.cs">
       <DependentUpon>musteriler.cs</DependentUpon>
     </Compile>
-    <Compile Include="ButikUnGUI\Settings.cs">
+    <Compile Include="ButikUser\siparis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ButikUnGUI\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="ButikUser\siparis.Designer.cs">
+      <DependentUpon>siparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButikUser\urun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButikUser\urun.Designer.cs">
+      <DependentUpon>urun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="faturaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>faturaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FATURE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FATURE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="newUpdated.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>newUpdated.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ButikUnGUI\login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\adduser.resx">
+      <DependentUpon>adduser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="API\addcustomer.resx">
+      <DependentUpon>addcustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="API\addorder.resx">
+      <DependentUpon>addorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="API\addproduct.resx">
+      <DependentUpon>addproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="API\OpenOrder.resx">
+      <DependentUpon>OpenOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikUnGUI\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikUnGUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ButikUnGUI\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ButikUnGUI\musteriler.resx">
+    <EmbeddedResource Include="ButikUser\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikUser\musteriler.resx">
       <DependentUpon>musteriler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ButikUnGUI\Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <EmbeddedResource Include="ButikUser\siparis.resx">
+      <DependentUpon>siparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikUser\urun.resx">
+      <DependentUpon>urun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +217,63 @@
     <None Include="butikunDataSet.xss">
       <DependentUpon>butikunDataSet.xsd</DependentUpon>
     </None>
+    <None Include="butikunDataSet1.xsc">
+      <DependentUpon>butikunDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="butikunDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>butikunDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="butikunDataSet1.xss">
+      <DependentUpon>butikunDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="butikunDataSet2.xsc">
+      <DependentUpon>butikunDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="butikunDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>butikunDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="butikunDataSet2.xss">
+      <DependentUpon>butikunDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="faturaDataSet.xsc">
+      <DependentUpon>faturaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="faturaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>faturaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="faturaDataSet.xss">
+      <DependentUpon>faturaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FATURE.xsc">
+      <DependentUpon>FATURE.xsd</DependentUpon>
+    </None>
+    <None Include="FATURE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FATURE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FATURE.xss">
+      <DependentUpon>FATURE.xsd</DependentUpon>
+    </None>
+    <None Include="JSON\settings.JSON" />
+    <None Include="newUpdated.xsc">
+      <DependentUpon>newUpdated.xsd</DependentUpon>
+    </None>
+    <None Include="newUpdated.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>newUpdated.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="newUpdated.xss">
+      <DependentUpon>newUpdated.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
