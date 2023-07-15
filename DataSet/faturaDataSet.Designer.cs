@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace butikunmuhasebe {
+namespace butikunmuhasebe.DataSet {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace butikunmuhasebe {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FATURE")]
+    [global::System.Xml.Serialization.XmlRootAttribute("faturaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FATURE : global::System.Data.DataSet {
+    public partial class faturaDataSet : global::System.Data.DataSet {
         
         private faturaDataTable tablefatura;
         
@@ -30,7 +30,7 @@ namespace butikunmuhasebe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public FATURE() {
+        public faturaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace butikunmuhasebe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected FATURE(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected faturaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace butikunmuhasebe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FATURE cln = ((FATURE)(base.Clone()));
+            faturaDataSet cln = ((faturaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace butikunmuhasebe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FATURE";
+            this.DataSetName = "faturaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FATURE.xsd";
+            this.Namespace = "http://tempuri.org/faturaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablefatura = new faturaDataTable();
@@ -225,7 +225,7 @@ namespace butikunmuhasebe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FATURE ds = new FATURE();
+            faturaDataSet ds = new faturaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -492,11 +492,11 @@ namespace butikunmuhasebe {
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
-                this.columnfirma_adi.MaxLength = 255;
+                this.columnfirma_adi.MaxLength = 5000;
                 this.columnfatura_no.MaxLength = 20;
                 this.columnurunler.AllowDBNull = false;
-                this.columnurunler.MaxLength = 255;
-                this.columnaciklama.MaxLength = 255;
+                this.columnurunler.MaxLength = 5000;
+                this.columnaciklama.MaxLength = 5000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -564,7 +564,7 @@ namespace butikunmuhasebe {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FATURE ds = new FATURE();
+                faturaDataSet ds = new faturaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -835,7 +835,7 @@ namespace butikunmuhasebe {
         }
     }
 }
-namespace butikunmuhasebe.FATURETableAdapters {
+namespace butikunmuhasebe.DataSet.faturaDataSetTableAdapters {
     
     
     /// <summary>
@@ -1041,7 +1041,7 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FATURE.faturaDataTable dataTable) {
+        public virtual int Fill(faturaDataSet.faturaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1054,9 +1054,9 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FATURE.faturaDataTable GetData() {
+        public virtual faturaDataSet.faturaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FATURE.faturaDataTable dataTable = new FATURE.faturaDataTable();
+            faturaDataSet.faturaDataTable dataTable = new faturaDataSet.faturaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1064,14 +1064,14 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FATURE.faturaDataTable dataTable) {
+        public virtual int Update(faturaDataSet.faturaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FATURE dataSet) {
+        public virtual int Update(faturaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "fatura");
         }
         
@@ -1420,7 +1420,7 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(FATURE dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(faturaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._faturaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.fatura.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1439,7 +1439,7 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(FATURE dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(faturaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._faturaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.fatura.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1457,7 +1457,7 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(FATURE dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(faturaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._faturaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.fatura.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1499,7 +1499,7 @@ SELECT id, firma_adi, fatura_no, tarih, tutar, urunler, aciklama FROM fatura WHE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(FATURE dataSet) {
+        public virtual int UpdateAll(faturaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

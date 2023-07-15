@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace butikunmuhasebe {
+namespace butikunmuhasebe.DataSet {
     
     
     /// <summary>
@@ -3286,7 +3286,7 @@ namespace butikunmuhasebe {
         }
     }
 }
-namespace butikunmuhasebe.newUpdatedTableAdapters {
+namespace butikunmuhasebe.DataSet.newUpdatedTableAdapters {
     
     
     /// <summary>

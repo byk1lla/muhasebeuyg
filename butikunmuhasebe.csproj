@@ -87,17 +87,17 @@
       <DependentUpon>OpenOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="API\require.cs" />
-    <Compile Include="butikunDataSet.Designer.cs">
+    <Compile Include="DataSet\butikunDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>butikunDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="butikunDataSet1.Designer.cs">
+    <Compile Include="DataSet\butikunDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>butikunDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="butikunDataSet2.Designer.cs">
+    <Compile Include="DataSet\butikunDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>butikunDataSet2.xsd</DependentUpon>
@@ -144,17 +144,17 @@
     <Compile Include="ButikUser\urun.Designer.cs">
       <DependentUpon>urun.cs</DependentUpon>
     </Compile>
-    <Compile Include="faturaDataSet.Designer.cs">
+    <Compile Include="DataSet\faturaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>faturaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FATURE.Designer.cs">
+    <Compile Include="DataSet\FATURE.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FATURE.xsd</DependentUpon>
     </Compile>
-    <Compile Include="newUpdated.Designer.cs">
+    <Compile Include="DataSet\newUpdated.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>newUpdated.xsd</DependentUpon>
@@ -206,71 +206,71 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="butikunDataSet.xsc">
+    <None Include="DataSet\butikunDataSet.xsc">
       <DependentUpon>butikunDataSet.xsd</DependentUpon>
     </None>
-    <None Include="butikunDataSet.xsd">
+    <None Include="DataSet\butikunDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>butikunDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="butikunDataSet.xss">
+    <None Include="DataSet\butikunDataSet.xss">
       <DependentUpon>butikunDataSet.xsd</DependentUpon>
     </None>
-    <None Include="butikunDataSet1.xsc">
+    <None Include="DataSet\butikunDataSet1.xsc">
       <DependentUpon>butikunDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="butikunDataSet1.xsd">
+    <None Include="DataSet\butikunDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>butikunDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="butikunDataSet1.xss">
+    <None Include="DataSet\butikunDataSet1.xss">
       <DependentUpon>butikunDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="butikunDataSet2.xsc">
+    <None Include="DataSet\butikunDataSet2.xsc">
       <DependentUpon>butikunDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="butikunDataSet2.xsd">
+    <None Include="DataSet\butikunDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>butikunDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="butikunDataSet2.xss">
+    <None Include="DataSet\butikunDataSet2.xss">
       <DependentUpon>butikunDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="faturaDataSet.xsc">
+    <None Include="DataSet\faturaDataSet.xsc">
       <DependentUpon>faturaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="faturaDataSet.xsd">
+    <None Include="DataSet\faturaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>faturaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="faturaDataSet.xss">
+    <None Include="DataSet\faturaDataSet.xss">
       <DependentUpon>faturaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="FATURE.xsc">
+    <None Include="DataSet\FATURE.xsc">
       <DependentUpon>FATURE.xsd</DependentUpon>
     </None>
-    <None Include="FATURE.xsd">
+    <None Include="DataSet\FATURE.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>FATURE.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FATURE.xss">
+    <None Include="DataSet\FATURE.xss">
       <DependentUpon>FATURE.xsd</DependentUpon>
     </None>
     <None Include="JSON\settings.JSON" />
-    <None Include="newUpdated.xsc">
+    <None Include="DataSet\newUpdated.xsc">
       <DependentUpon>newUpdated.xsd</DependentUpon>
     </None>
-    <None Include="newUpdated.xsd">
+    <None Include="DataSet\newUpdated.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>newUpdated.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="newUpdated.xss">
+    <None Include="DataSet\newUpdated.xss">
       <DependentUpon>newUpdated.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
